@@ -14,10 +14,10 @@ public class MedianOf2SortedArrays {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] nums1 = { 3,4 };
-		int[] nums2 = {  };
+		int[] nums1 = { 3, 4 };
+		int[] nums2 = {};
 		double median = findMedianSortedArrays(nums1, nums2);
-		System.out.println(median);
+		System.out.println("Median = " + median);
 	}
 
 	public static double findMedianSortedArrays(int[] nums1, int[] nums2) {
@@ -41,7 +41,6 @@ public class MedianOf2SortedArrays {
 			} else if (l2 > r1) {
 				low = cut1 + 1;
 			} else {
-//				System.out.println(Math.max(l1, l2) + Math.min(r1, r2));
 				median = (n1 + n2) % 2 == 0 ? (Math.max(l1, l2) + Math.min(r1, r2)) / 2.0 : Math.min(r1, r2);
 				break;
 			}
